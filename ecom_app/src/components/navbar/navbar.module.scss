@@ -61,6 +61,9 @@ $nav-color: #040414;
 .phone {
   margin-right: 0.3rem;
 }
+.phoneDiv {
+  cursor: pointer;
+}
 
 .location {
   margin-right: 0.3rem;
@@ -74,4 +77,5 @@ $nav-color: #040414;
   background-color: white;
   top: 4rem;
   margin-left: 74.6%;
+  box-shadow: 0 0 1rem gray;
 }

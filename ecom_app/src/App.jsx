@@ -1,6 +1,6 @@
 // import style from "./App.module.scss";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Navbar from "./components/navbar/navbar";
 import ItemList from "./components/itemList/itemList";
 
@@ -11,7 +11,6 @@ function App() {
     const url = await fetch("https://fakestoreapi.com/products");
     const finalData = await url.json();
     getApiData(finalData);
-    console.log(finalData);
     dispatch({ type: "testingStore", payload: finalData });
   }, []);
 

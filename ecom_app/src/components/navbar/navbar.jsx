@@ -4,20 +4,26 @@ import { RiShoppingCart2Fill } from "react-icons/ri";
 import { GoDeviceMobile } from "react-icons/go";
 import { ImLocation2 } from "react-icons/im";
 import { BsSearch } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [myCartBotton, getMyCartBotton] = useState(false);
+  let cartItemCount = useSelector((state) => state.cart.length);
+  console.log(cartItemCount);
+
+  useEffect(() => {
+    window.navigator.geolocation.getCurrentPosition((position) => {
+      console.log("Latitude is :", position.coords.latitude);
+      console.log("Longitude is :", position.coords.longitude);
+    });
+  }, []);
   const cartItem = () => {
-    // if (!myCartBotton) {
-    //   getMyCartBotton(true);
-    // } else {
-    //   getMyCartBotton(false);
-    // }
     {
       !myCartBotton ? getMyCartBotton(true) : getMyCartBotton(false);
     }
   };
+
   return (
     <div className={style.nav}>
       <img src={logo} alt="Logo" className={style.logo} />
@@ -33,6 +39,7 @@ const Navbar = () => {
       <p className={style.myCart} onClick={cartItem}>
         my Cart
         <RiShoppingCart2Fill className={style.cart} />
+        {cartItemCount}
       </p>
       {myCartBotton && (
         <div className={style.cartSlider}>
@@ -40,9 +47,9 @@ const Navbar = () => {
         </div>
       )}
 
-      <p>
+      <p className={style.phoneDiv}>
         <GoDeviceMobile className={style.phone} />
-        Get App
+        Get Mobile App
       </p>
     </div>
   );

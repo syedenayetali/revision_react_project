@@ -1,7 +1,8 @@
-import redux from "redux";
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 import apiDataReducer from "./reducers/apiDataReducer";
+import cart from "./reducers/cart";
 
-const store = createStore(apiDataReducer);
+const reducer = combineReducers({ apiDataReducer, cart });
+const store = createStore(reducer);
 
 export default store;
