@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/revision_react_project/static/css/main.54d718e7.css",
+    "main.js": "/revision_react_project/static/js/main.d5071fff.js",
+    "static/media/logo.png": "/revision_react_project/static/media/logo.b22444c776e8995295ae.png",
+    "index.html": "/revision_react_project/index.html",
+    "main.54d718e7.css.map": "/revision_react_project/static/css/main.54d718e7.css.map",
+    "main.d5071fff.js.map": "/revision_react_project/static/js/main.d5071fff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54d718e7.css",
+    "static/js/main.d5071fff.js"
+  ]
+}
