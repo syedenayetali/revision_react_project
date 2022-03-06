@@ -1,0 +1,52 @@
+.card {
+  width: 10rem;
+  height: 16rem;
+  border: 1px gray solid;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.card:hover {
+  box-shadow: 0 0 10px gray;
+}
+.cartBottonNprice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  color: rgb(7, 7, 32);
+  height: 2.5em;
+  overflow: hidden;
+}
+
+.category {
+  margin: 0;
+  text-transform: uppercase;
+  color: rgb(100, 16, 16);
+  border-top: 1px gray solid;
+}
+
+.image {
+  width: 15em;
+  height: 15em;
+  margin: 1rem 0;
+}
+
+.price {
+  margin: 0;
+  text-align: right;
+  color: maroon;
+}
+.addToCart {
+  background-color: #f68a25;
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: aliceblue;
+  cursor: pointer;
+}
+.addToCart:active {
+  box-shadow: 0 0 3px gray;
+}
