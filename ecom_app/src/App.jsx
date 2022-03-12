@@ -6,10 +6,10 @@ import ItemList from "./components/itemList/itemList";
 
 function App() {
   const [apiData, getApiData] = useState();
-
   useEffect(async () => {
     const url = await fetch("https://fakestoreapi.com/products");
     const finalData = await url.json();
+    console.log(finalData);
     getApiData(finalData);
     dispatch({ type: "testingStore", payload: finalData });
   }, []);

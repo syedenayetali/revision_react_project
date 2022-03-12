@@ -4,6 +4,8 @@ import style from "./singleProduct.module.scss";
 const SingleProduct = (props) => {
   const product = props.oneProduct;
   const dispatch = useDispatch();
+  console.log("test");
+
   const addToCart = () => {
     dispatch({ type: "AddToCart", payload: product });
   };

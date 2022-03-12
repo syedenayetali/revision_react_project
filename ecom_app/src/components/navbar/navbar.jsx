@@ -9,15 +9,12 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [myCartBotton, getMyCartBotton] = useState(false);
+
+  // let cartItemCount = 0;
   let cartItemCount = useSelector((state) => state.cart.length);
+  useSelector((state) => console.log(state.cart));
   console.log(cartItemCount);
 
-  useEffect(() => {
-    window.navigator.geolocation.getCurrentPosition((position) => {
-      console.log("Latitude is :", position.coords.latitude);
-      console.log("Longitude is :", position.coords.longitude);
-    });
-  }, []);
   const cartItem = () => {
     {
       !myCartBotton ? getMyCartBotton(true) : getMyCartBotton(false);
