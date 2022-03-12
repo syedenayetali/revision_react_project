@@ -1,0 +1,83 @@
+.table {
+  width: 100vw;
+  height: 100vh;
+  // filter: none;
+  background-image: url("../../asset/loginPage/lp_background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  color: aliceblue;
+}
+
+.firstColumn {
+  width: 50vw;
+  font-weight: bold;
+  text-shadow: 0 0 50px rgb(49, 17, 80);
+
+  h1 {
+    color: #f68a25;
+    font-size: 4rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.secondColumn {
+  // border: red 1px solid;
+  width: 50vw;
+  .signinRegister {
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    p {
+      background-color: aliceblue;
+      border-right: #07072c 1px solid;
+      border-left: #07072c 1px solid;
+    }
+    .register {
+      padding: 0.2rem;
+      width: 8rem;
+      text-align: center;
+    }
+    .signin {
+      padding: 0.2rem;
+      width: 8rem;
+      text-align: center;
+    }
+  }
+
+  form {
+    padding-left: 10rem;
+    // border: #07072c 1px solid;
+    p {
+      font-size: 1rem;
+      font-weight: 600;
+      // color: #07072c;
+    }
+    input {
+      width: 65%;
+      padding: 0.5rem;
+      border: none;
+      opacity: 70%;
+    }
+    h4 {
+      font-weight: 400;
+      cursor: pointer;
+    }
+    button {
+      font-size: 0.8rem;
+      padding: 0.3rem 1rem;
+      background-color: #07072c;
+      color: aliceblue;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

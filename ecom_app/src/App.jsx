@@ -1,27 +1,19 @@
 // import style from "./App.module.scss";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import Navbar from "./components/navbar/navbar";
-import ItemList from "./components/itemList/itemList";
+
+import LoginPage from "./components/loginPage/loginPage";
+import Dashboard from "./components/dashboard/dashboard";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
-  const [apiData, getApiData] = useState();
-  useEffect(async () => {
-    const url = await fetch("https://fakestoreapi.com/products");
-    const finalData = await url.json();
-    console.log(finalData);
-    getApiData(finalData);
-    dispatch({ type: "testingStore", payload: finalData });
-  }, []);
-
-  const dispatch = useDispatch();
-
   return (
-    <div>
-      <Navbar />
-      <ItemList itemList={apiData} />
-    </div>
+    <Switch>
+      <Route exact path="/" component={LoginPage} />
+      <Route path="/dashboard" component={Dashboard} />
+    </Switch>
   );
 }
 
 export default App;
+// 10024792036
